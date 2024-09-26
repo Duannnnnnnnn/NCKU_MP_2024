@@ -1,8 +1,8 @@
 #INCLUDE <p18f4520.inc>
-CONFIG OSC = INTIO67       ; ???????
-CONFIG WDT = OFF           ; ????????
+CONFIG OSC = INTIO67   
+CONFIG WDT = OFF       
 
-ORG 0x00                   ; ????? 0x00 
+ORG 0x00             
 clr:
 	CLRF 0x100
 	CLRF 0x106
@@ -38,8 +38,8 @@ init_oloop:
     LFSR 0, 0x100;j
     MOVLW d'7'
     MOVWF 0x12, 1;[0x12]=n
-    MOVFF 0x112, 0x113 ; copy n
-    DECF 0x13, 1, 1 ; 0x13 = n-1
+    MOVFF 0x112, 0x113 
+    DECF 0x13, 1, 1 ; [0x13] = n-1
 oloop:
     init_iloop:
 	MOVFF 0x110, 0x111 ;j=i
@@ -68,7 +68,7 @@ oloop:
 	CPFSEQ 0x11, 1 ; cmp j with n, skip if  '='
 	    GOTO iloop
 oloop_cont:
-    INCF 0x10,1 , 1 ; i++ ( ,1 for bank )
+    INCF 0x10,1 , 1 ; i++ 
     MOVFF POSTINC0, WREG ; pi++
     MOVFF 0x113, WREG
     CPFSEQ 0x10, 1 ; cmp i with n-1

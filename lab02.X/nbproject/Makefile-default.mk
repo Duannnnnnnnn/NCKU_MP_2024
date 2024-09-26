@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=test.asm
+SOURCEFILES_QUOTED_IF_SPACED=test.asm bonus.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/test.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/test.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/test.o ${OBJECTDIR}/bonus.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/test.o.d ${OBJECTDIR}/bonus.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/test.o
+OBJECTFILES=${OBJECTDIR}/test.o ${OBJECTDIR}/bonus.o
 
 # Source Files
-SOURCEFILES=test.asm
+SOURCEFILES=test.asm bonus.asm
 
 
 CFLAGS=
@@ -102,6 +102,14 @@ ${OBJECTDIR}/test.o: test.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d "${OBJECTDIR}/test.o"
 	@${FIXDEPS} "${OBJECTDIR}/test.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
+${OBJECTDIR}/bonus.o: bonus.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bonus.o.d 
+	@${RM} ${OBJECTDIR}/bonus.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/bonus.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/bonus.lst\" -e\"${OBJECTDIR}/bonus.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/bonus.o\" \"bonus.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/bonus.o"
+	@${FIXDEPS} "${OBJECTDIR}/bonus.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
 else
 ${OBJECTDIR}/test.o: test.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -110,6 +118,14 @@ ${OBJECTDIR}/test.o: test.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/test.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/test.lst\" -e\"${OBJECTDIR}/test.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/test.o\" \"test.asm\" 
 	@${DEP_GEN} -d "${OBJECTDIR}/test.o"
 	@${FIXDEPS} "${OBJECTDIR}/test.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	
+${OBJECTDIR}/bonus.o: bonus.asm  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bonus.o.d 
+	@${RM} ${OBJECTDIR}/bonus.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/bonus.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/bonus.lst\" -e\"${OBJECTDIR}/bonus.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/bonus.o\" \"bonus.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/bonus.o"
+	@${FIXDEPS} "${OBJECTDIR}/bonus.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 endif
 
