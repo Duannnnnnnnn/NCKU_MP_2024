@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=test.asm
+SOURCEFILES_QUOTED_IF_SPACED=advanced.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/test.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/test.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/advanced.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/advanced.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/test.o
+OBJECTFILES=${OBJECTDIR}/advanced.o
 
 # Source Files
-SOURCEFILES=test.asm
+SOURCEFILES=advanced.asm
 
 
 CFLAGS=
@@ -94,22 +94,22 @@ MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/test.o: test.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/advanced.o: advanced.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/test.o.d 
-	@${RM} ${OBJECTDIR}/test.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/test.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/test.lst\" -e\"${OBJECTDIR}/test.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/test.o\" \"test.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/test.o"
-	@${FIXDEPS} "${OBJECTDIR}/test.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/advanced.o.d 
+	@${RM} ${OBJECTDIR}/advanced.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/advanced.lst\" -e\"${OBJECTDIR}/advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/advanced.o\" \"advanced.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/advanced.o"
+	@${FIXDEPS} "${OBJECTDIR}/advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 else
-${OBJECTDIR}/test.o: test.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/advanced.o: advanced.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/test.o.d 
-	@${RM} ${OBJECTDIR}/test.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/test.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/test.lst\" -e\"${OBJECTDIR}/test.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/test.o\" \"test.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/test.o"
-	@${FIXDEPS} "${OBJECTDIR}/test.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/advanced.o.d 
+	@${RM} ${OBJECTDIR}/advanced.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/advanced.lst\" -e\"${OBJECTDIR}/advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/advanced.o\" \"advanced.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/advanced.o"
+	@${FIXDEPS} "${OBJECTDIR}/advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 endif
 

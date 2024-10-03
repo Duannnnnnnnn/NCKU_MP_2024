@@ -1,4 +1,4 @@
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  1
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Warning[203]: Found opcode in column 1. (CLRF)
 Warning[203]: Found opcode in column 1. (CLRF)
 00000C 6A32           00031 CLRF MULTIPLIER_1
 Warning[203]: Found opcode in column 1. (CLRF)
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  2
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -109,7 +109,7 @@ Error[113]  : Symbol not previously defined (AddMultiplier)
                       00064 
 000040 0000           00065     NOP
                       00066     END                      ; ????
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  3
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  3
 
 
 SYMBOL TABLE
@@ -168,7 +168,7 @@ BCLIP                             00000003
 BF                                00000000
 BGST                              00000005
 BOR                               00000000
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  4
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  4
 
 
 SYMBOL TABLE
@@ -227,7 +227,7 @@ CLKO                              00000006
 CM0                               00000000
 CM1                               00000001
 CM2                               00000002
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  5
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  5
 
 
 SYMBOL TABLE
@@ -286,7 +286,7 @@ FLTS                              00000002
 FREE                              00000004
 FSR0                              00000000
 FSR0H                             00000FEA
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  6
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  6
 
 
 SYMBOL TABLE
@@ -345,7 +345,7 @@ INT2P                             00000007
 INTCON                            00000FF2
 INTCON2                           00000FF1
 INTCON3                           00000FF0
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  7
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  7
 
 
 SYMBOL TABLE
@@ -404,7 +404,7 @@ LATD4                             00000004
 LATD5                             00000005
 LATD6                             00000006
 LATD7                             00000007
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  8
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  8
 
 
 SYMBOL TABLE
@@ -463,7 +463,7 @@ OSC2                              00000006
 OSCCON                            00000FD3
 OSCFIE                            00000007
 OSCFIF                            00000007
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE  9
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  9
 
 
 SYMBOL TABLE
@@ -522,7 +522,7 @@ POSTDEC2                          00000FDD
 POSTINC0                          00000FEE
 POSTINC1                          00000FE6
 POSTINC2                          00000FDE
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 10
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 10
 
 
 SYMBOL TABLE
@@ -581,7 +581,7 @@ RC2                               00000002
 RC3                               00000003
 RC4                               00000004
 RC5                               00000005
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 11
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 11
 
 
 SYMBOL TABLE
@@ -640,7 +640,7 @@ SMP                               00000007
 SP0                               00000000
 SP1                               00000001
 SP2                               00000002
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 12
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 12
 
 
 SYMBOL TABLE
@@ -699,7 +699,7 @@ T1RUN                             00000006
 T1SYNC                            00000002
 T2CKPS0                           00000000
 T2CKPS1                           00000001
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 13
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 13
 
 
 SYMBOL TABLE
@@ -758,7 +758,7 @@ TOUTPS0                           00000003
 TOUTPS1                           00000004
 TOUTPS2                           00000005
 TOUTPS3                           00000006
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 14
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 14
 
 
 SYMBOL TABLE
@@ -817,7 +817,7 @@ TXCKP                             00000004
 TXEN                              00000005
 TXIE                              00000004
 TXIF                              00000004
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 15
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 15
 
 
 SYMBOL TABLE
@@ -876,7 +876,7 @@ _CPB_ON_5H                        000000BF
 _CPD_OFF_5H                       000000FF
 _CPD_ON_5H                        0000007F
 _DEBUG_OFF_4L                     000000FF
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 16
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 16
 
 
 SYMBOL TABLE
@@ -935,7 +935,7 @@ _WDTPS_16384_2H                   000000FD
 _WDTPS_16_2H                      000000E9
 _WDTPS_1_2H                       000000E1
 _WDTPS_2048_2H                    000000F7
-MPASM 5.84                          TEST.ASM   10-3-2024  15:54:09         PAGE 17
+MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 17
 
 
 SYMBOL TABLE

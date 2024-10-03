@@ -501,8 +501,6 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
-      <item path="advanced.asm" ex="true" overriding="false">
-      </item>
       <item path="basic.asm" ex="true" overriding="false">
       </item>
       <mpasmsuite>
@@ -512,6 +510,8 @@
         <property key="extended-mode-mpasm" value="false"/>
         <property key="extended-mode-mplink" value="false"/>
       </mpasmsuite>
+      <item path="test.asm" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
