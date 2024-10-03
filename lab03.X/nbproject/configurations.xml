@@ -14,6 +14,7 @@
                    projectFiles="true">
       <itemPath>basic.asm</itemPath>
       <itemPath>advanced.asm</itemPath>
+      <itemPath>test.asm</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -500,6 +501,8 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <item path="advanced.asm" ex="true" overriding="false">
+      </item>
       <item path="basic.asm" ex="true" overriding="false">
       </item>
       <mpasmsuite>

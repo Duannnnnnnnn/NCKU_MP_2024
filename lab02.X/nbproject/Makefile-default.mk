@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=advanced.asm
+SOURCEFILES_QUOTED_IF_SPACED=
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/advanced.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/advanced.o.d
+OBJECTFILES_QUOTED_IF_SPACED=
+POSSIBLE_DEPFILES=
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/advanced.o
+OBJECTFILES=
 
 # Source Files
-SOURCEFILES=advanced.asm
+SOURCEFILES=
 
 
 CFLAGS=
@@ -94,23 +94,7 @@ MP_LINKER_DEBUG_OPTION=
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/advanced.o: advanced.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/advanced.o.d 
-	@${RM} ${OBJECTDIR}/advanced.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG -d__MPLAB_DEBUGGER_SIMULATOR=1 -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/advanced.lst\" -e\"${OBJECTDIR}/advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/advanced.o\" \"advanced.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/advanced.o"
-	@${FIXDEPS} "${OBJECTDIR}/advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 else
-${OBJECTDIR}/advanced.o: advanced.asm  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/advanced.o.d 
-	@${RM} ${OBJECTDIR}/advanced.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/advanced.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/advanced.lst\" -e\"${OBJECTDIR}/advanced.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/advanced.o\" \"advanced.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/advanced.o"
-	@${FIXDEPS} "${OBJECTDIR}/advanced.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
-	
 endif
 
 # ------------------------------------------------------------------------------------

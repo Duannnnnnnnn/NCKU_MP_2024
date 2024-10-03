@@ -1,4 +1,4 @@
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  1
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -36,7 +36,7 @@ Warning[205]: Found directive in column 1. (List)
 000016 1292           00019     IORWF TRISA, F
 000018 0000           00020     NOP
                       00021     end                   ; ?????
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  2
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  2
 
 
 SYMBOL TABLE
@@ -95,7 +95,7 @@ BCLIP                             00000003
 BF                                00000000
 BGST                              00000005
 BOR                               00000000
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  3
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  3
 
 
 SYMBOL TABLE
@@ -154,7 +154,7 @@ CLKO                              00000006
 CM0                               00000000
 CM1                               00000001
 CM2                               00000002
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  4
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  4
 
 
 SYMBOL TABLE
@@ -213,7 +213,7 @@ FLTS                              00000002
 FREE                              00000004
 FSR0                              00000000
 FSR0H                             00000FEA
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  5
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  5
 
 
 SYMBOL TABLE
@@ -272,7 +272,7 @@ INT2P                             00000007
 INTCON                            00000FF2
 INTCON2                           00000FF1
 INTCON3                           00000FF0
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  6
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  6
 
 
 SYMBOL TABLE
@@ -331,7 +331,7 @@ LATD4                             00000004
 LATD5                             00000005
 LATD6                             00000006
 LATD7                             00000007
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  7
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  7
 
 
 SYMBOL TABLE
@@ -390,7 +390,7 @@ P                                 00000004
 P1A                               00000002
 P1B                               00000005
 P1C                               00000006
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  8
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  8
 
 
 SYMBOL TABLE
@@ -449,7 +449,7 @@ PROD                              00000FF3
 PRODH                             00000FF4
 PRODL                             00000FF3
 PRSEN                             00000007
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE  9
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE  9
 
 
 SYMBOL TABLE
@@ -508,7 +508,7 @@ RCIE                              00000005
 RCIF                              00000005
 RCIP                              00000005
 RCMT                              00000006
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 10
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 10
 
 
 SYMBOL TABLE
@@ -567,7 +567,7 @@ SSPBUF                            00000FC9
 SSPCON1                           00000FC6
 SSPCON2                           00000FC5
 SSPEN                             00000005
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 11
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 11
 
 
 SYMBOL TABLE
@@ -626,7 +626,7 @@ T3CKPS1                           00000005
 T3CON                             00000FB1
 T3SYNC                            00000002
 TABLAT                            00000FF5
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 12
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 12
 
 
 SYMBOL TABLE
@@ -685,7 +685,7 @@ TRISA7                            00000007
 TRISB                             00000F93
 TRISB0                            00000000
 TRISB1                            00000001
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 13
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 13
 
 
 SYMBOL TABLE
@@ -744,7 +744,7 @@ VREFN                             00000002
 VREFP                             00000003
 W                                 00000000
 WCOL                              00000007
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 14
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 14
 
 
 SYMBOL TABLE
@@ -803,7 +803,7 @@ _EBTR2_ON_7L                      000000FB
 _EBTR3_OFF_7L                     000000FF
 _EBTR3_ON_7L                      000000F7
 _EBTRB_OFF_7H                     000000FF
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 15
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 15
 
 
 SYMBOL TABLE
@@ -862,7 +862,7 @@ _WDTPS_8192_2H                    000000FB
 _WDTPS_8_2H                       000000E7
 _WDT_OFF_2H                       000000FE
 _WDT_ON_2H                        000000FF
-MPASM 5.84                         BASIC.ASM   10-2-2024  21:20:52         PAGE 16
+MPASM 5.84                         BASIC.ASM   10-3-2024  15:41:40         PAGE 16
 
 
 SYMBOL TABLE
