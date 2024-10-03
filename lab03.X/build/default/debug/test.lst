@@ -1,4 +1,4 @@
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  1
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Warning[203]: Found opcode in column 1. (CLRF)
 Warning[203]: Found opcode in column 1. (CLRF)
 00000C 6A32           00031 CLRF MULTIPLIER_1
 Warning[203]: Found opcode in column 1. (CLRF)
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  2
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -90,26 +90,54 @@ Warning[203]: Found opcode in column 1. (MOVWF)
 000022 6E40           00046 MOVWF LOOP_COUNTER
                       00047 
 000024                00048 MultiplyLoop:
-000024 B003           00049     BTFSC MULTIPLICAND_L, 0  ; ???????????? 1
-Error[113]  : Symbol not previously defined (AddMultiplier)
-000026 EC00 F000      00050     CALL AddMultiplier       ; ??? 1?????????
-00002A 90D8           00051     BCF STATUS, C            ; ?????
-00002C 3202           00052     RRCF MULTIPLICAND_H, F   ; ????????
-00002E 3203           00053     RRCF MULTIPLICAND_L, F   ; ????????
-                      00054 
-                      00055     ; ???????
-000030 90D8           00056     BCF STATUS, C            ; ?????
-000032 3633           00057     RLCF MULTIPLIER_0, F     ; ???????
-000034 3632           00058     RLCF MULTIPLIER_1, F     ; ???????
-000036 3631           00059     RLCF MULTIPLIER_2, F     ; ???????
-000038 3630           00060     RLCF MULTIPLIER_3, F     ; ???????
-                      00061 
-00003A 2E40           00062     DECFSZ LOOP_COUNTER, F   ; ???????
-00003C EF?? F???      00063     GOTO MultiplyLoop        ; ??????? 0?????
-                      00064 
-000040 0000           00065     NOP
-                      00066     END                      ; ????
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  3
+000024 A003           00049     BTFSS MULTIPLICAND_L, 0  ; ???????????? 0
+000026 EF?? F???      00050     GOTO Continue                 ; ??? 1?????????
+                      00051     
+00002A 90D8           00052     BCF STATUS, C            ; ?????
+00002C 5033           00053     MOVF MULTIPLIER_0, W
+00002E 2623           00054     ADDWF RESULT_0, F        ; ????
+000030 B0D8           00055     BTFSC STATUS, C          ; ????
+000032 2A22           00056     INCF RESULT_1, F         ; ????????????
+                      00057 
+                      00058     ; ? MULTIPLIER_1 ?? RESULT_1
+000034 5032           00059     MOVF MULTIPLIER_1, W
+000036 2622           00060     ADDWF RESULT_1, F        ; ?????
+000038 B0D8           00061     BTFSC STATUS, C          ; ????
+00003A 2A21           00062     INCF RESULT_2, F         ; ????????????
+                      00063 
+                      00064     ; ? MULTIPLIER_2 ?? RESULT_2
+00003C 5031           00065     MOVF MULTIPLIER_2, W
+00003E 2621           00066     ADDWF RESULT_2, F        ; ?????
+000040 B0D8           00067     BTFSC STATUS, C          ; ????
+000042 2A20           00068     INCF RESULT_3, F         ; ????????????
+                      00069 
+                      00070     ; ? MULTIPLIER_3 ?? RESULT_3
+000044 5030           00071     MOVF MULTIPLIER_3, W
+000046 2620           00072     ADDWF RESULT_3, F        ; ????
+000048                00073 Continue:
+000048 90D8           00074     BCF STATUS, C            ; ?????
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00004A 3202           00075     RRCF MULTIPLICAND_H, F   ; ????????
+00004C 3203           00076     RRCF MULTIPLICAND_L, F   ; ????????
+                      00077 
+                      00078     ; ???????
+00004E 90D8           00079     BCF STATUS, C            ; ?????
+000050 3633           00080     RLCF MULTIPLIER_0, F     ; ???????
+000052 3632           00081     RLCF MULTIPLIER_1, F     ; ???????
+000054 3631           00082     RLCF MULTIPLIER_2, F     ; ???????
+000056 3630           00083     RLCF MULTIPLIER_3, F     ; ???????
+                      00084 
+000058 2E40           00085     DECFSZ LOOP_COUNTER, F   ; ???????
+00005A EF?? F???      00086     GOTO MultiplyLoop        ; ??????? 0?????
+                      00087 
+00005E 0000           00088     NOP                      ; ?????
+                      00089     END                      ; ????
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  4
 
 
 SYMBOL TABLE
@@ -168,7 +196,7 @@ BCLIP                             00000003
 BF                                00000000
 BGST                              00000005
 BOR                               00000000
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  4
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  5
 
 
 SYMBOL TABLE
@@ -227,7 +255,7 @@ CLKO                              00000006
 CM0                               00000000
 CM1                               00000001
 CM2                               00000002
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  5
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  6
 
 
 SYMBOL TABLE
@@ -250,6 +278,7 @@ CVREN                             00000007
 CVROE                             00000006
 CVRR                              00000005
 CVRSS                             00000004
+Continue                          00000048
 D                                 00000005
 DC                                00000001
 DC1B0                             00000004
@@ -285,13 +314,13 @@ FLT0                              00000000
 FLTS                              00000002
 FREE                              00000004
 FSR0                              00000000
-FSR0H                             00000FEA
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  6
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  7
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+FSR0H                             00000FEA
 FSR0L                             00000FE9
 FSR1                              00000001
 FSR1H                             00000FE2
@@ -344,13 +373,13 @@ INT2IP                            00000007
 INT2P                             00000007
 INTCON                            00000FF2
 INTCON2                           00000FF1
-INTCON3                           00000FF0
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  7
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  8
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+INTCON3                           00000FF0
 INTEDG0                           00000006
 INTEDG1                           00000005
 INTEDG2                           00000004
@@ -403,13 +432,13 @@ LATD3                             00000003
 LATD4                             00000004
 LATD5                             00000005
 LATD6                             00000006
-LATD7                             00000007
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  8
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+LATD7                             00000007
 LATE                              00000F8D
 LATE0                             00000000
 LATE1                             00000001
@@ -462,13 +491,13 @@ OSC1                              00000007
 OSC2                              00000006
 OSCCON                            00000FD3
 OSCFIE                            00000007
-OSCFIF                            00000007
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE  9
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+OSCFIF                            00000007
 OSCFIP                            00000007
 OSCTUNE                           00000F9B
 OSTS                              00000003
@@ -521,13 +550,13 @@ POSTDEC1                          00000FE5
 POSTDEC2                          00000FDD
 POSTINC0                          00000FEE
 POSTINC1                          00000FE6
-POSTINC2                          00000FDE
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 10
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+POSTINC2                          00000FDE
 PR2                               00000FCB
 PREINC0                           00000FEC
 PREINC1                           00000FE4
@@ -580,13 +609,13 @@ RC1                               00000001
 RC2                               00000002
 RC3                               00000003
 RC4                               00000004
-RC5                               00000005
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 11
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+RC5                               00000005
 RC6                               00000006
 RC7                               00000007
 RCEN                              00000003
@@ -639,13 +668,13 @@ SENDB                             00000003
 SMP                               00000007
 SP0                               00000000
 SP1                               00000001
-SP2                               00000002
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 12
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 13
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+SP2                               00000002
 SP3                               00000003
 SP4                               00000004
 SPBRG                             00000FAF
@@ -698,13 +727,13 @@ T1OSO                             00000000
 T1RUN                             00000006
 T1SYNC                            00000002
 T2CKPS0                           00000000
-T2CKPS1                           00000001
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 13
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 14
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+T2CKPS1                           00000001
 T2CON                             00000FCA
 T2OUTPS0                          00000003
 T2OUTPS1                          00000004
@@ -757,13 +786,13 @@ TOSU                              00000FFF
 TOUTPS0                           00000003
 TOUTPS1                           00000004
 TOUTPS2                           00000005
-TOUTPS3                           00000006
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 14
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 15
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TOUTPS3                           00000006
 TRISA                             00000F92
 TRISA0                            00000000
 TRISA1                            00000001
@@ -816,13 +845,13 @@ TX9D                              00000000
 TXCKP                             00000004
 TXEN                              00000005
 TXIE                              00000004
-TXIF                              00000004
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 15
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 16
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TXIF                              00000004
 TXIP                              00000004
 TXREG                             00000FAD
 TXSTA                             00000FAC
@@ -875,13 +904,13 @@ _CPB_OFF_5H                       000000FF
 _CPB_ON_5H                        000000BF
 _CPD_OFF_5H                       000000FF
 _CPD_ON_5H                        0000007F
-_DEBUG_OFF_4L                     000000FF
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 16
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 17
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_DEBUG_OFF_4L                     000000FF
 _DEBUG_ON_4L                      0000007F
 _DEVID1                           003FFFFE
 _DEVID2                           003FFFFF
@@ -934,13 +963,13 @@ _WDTPS_128_2H                     000000EF
 _WDTPS_16384_2H                   000000FD
 _WDTPS_16_2H                      000000E9
 _WDTPS_1_2H                       000000E1
-_WDTPS_2048_2H                    000000F7
-MPASM 5.84                          TEST.ASM   10-3-2024  17:34:49         PAGE 17
+MPASM 5.84                          TEST.ASM   10-3-2024  17:59:18         PAGE 18
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_WDTPS_2048_2H                    000000F7
 _WDTPS_256_2H                     000000F1
 _WDTPS_2_2H                       000000E3
 _WDTPS_32768_2H                   000000FF
@@ -973,7 +1002,7 @@ __18F4520                         00000001
 __DEBUG                           
 __MPLAB_DEBUGGER_SIMULATOR        1
 
-Errors   :     1
+Errors   :     0
 Warnings :    22 reported,     0 suppressed
 Messages :     0 reported,     0 suppressed
 
